@@ -34,6 +34,16 @@ public class PreOrder_BinaryTree {
             preOrder(root.left);
             preOrder(root.right);
         }
+
+        // Tree Traversal - InOrder
+        void inOrder(Node root) {
+            if (root == null) {
+                return;
+            }
+            inOrder(root.left);
+            System.out.print(root.data + " ");
+            inOrder(root.right);
+        }
     }
 
     public static void main(String args[]) {
