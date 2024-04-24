@@ -98,6 +98,18 @@ public class PreOrder_BinaryTree {
             int rh = height(root.right);
             return Math.max(lh, rh) + 1;
         }
+
+        // count of Nodes
+        int count(Node root) {
+            if (root == null) {
+                return 0;
+            }
+            int leftCount = count(root.left);
+            int rightCount = count(root.right);
+
+            return leftCount + rightCount + 1;
+        }
+
     }
 
     public static void main(String args[]) {
